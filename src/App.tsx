@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import './App.css'
+import Header from '@components/Header/Header'
+import PostList from '@components/Blog/PostList'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        Hola
-      </div>
+      <Header/>
+      <PostList/>
     </>
   )
 }
