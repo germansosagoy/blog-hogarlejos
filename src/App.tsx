@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import Header from '@components/Header/Header'
-import PostList from '@components/Blog/PostList'
+import Blog from '@components/Blog/Blog'
 
 function App() {
 
   return (
     <>
       <Header/>
-      <PostList/>
+      <Blog/>
     </>
   )
 }
