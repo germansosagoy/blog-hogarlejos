@@ -19,6 +19,7 @@
       "@lib/*": ["src/lib/*"],
       "@types/*": ["src/types/*"],
       "@assets/*": ["src/assets/*"],
+      "@api/*": ["src/api/*"],
     },
     /* Linting */
     "strict": true,

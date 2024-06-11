@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, CircleX, Sun } from "lucide-react";
+// import { Switch } from "@headlessui/react";
 
 const headerItems = [
   { id: 1, text: "Blog" },
@@ -22,25 +23,25 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex">
           {headerItems.map((item) => (
-            <li key={item.id} className="p-2 m-2 font-medium text-lg tracking-wide leading-tight cursor-pointer duration-500">
+            <li key={item.id} className="p-2 m-2 font-medium text-lg tracking-wider leading-tight cursor-pointer duration-500">
               <span className="hover:text-[#1A1A1A]/60 text-[#1A1A1A]">{item.text}</span>
              <span className="text-[#1A1A1A]">{item.icon}</span>
             </li>
           ))}
         </ul>
         {/* Mobile Navigation Menu */}
-        <div onClick={handleNav} className="block md:hidden">
+        <div onClick={handleNav} className="block md:hidden text-black/80">
           {nav ? <CircleX size={20} /> : <Menu size={20} />}
         </div>
         <ul
           className={
             nav
-              ? "fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
-              : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
+              ? "fixed md:hidden right-0 top-0 w-[60%] h-full border-b-2  bg-primary-light text-primary-dark ease-in-out duration-500"
+              : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 right-[-100%]"
           }
         >
           {/* Mobile Logo */}
-          <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">
+          <h1 className="w-full text-xl font-bold text-[#00df9a] m-4">
             Hogar Lejos.
           </h1>
           {/* Mobile Navigation Items */}
